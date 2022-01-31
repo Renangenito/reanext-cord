@@ -84,8 +84,8 @@ export default function ChatPage() {
     <Box
       styleSheet={{
         display: 'flex', alignItems: 'center', justifyContent: 'center',
-        backgroundColor: appConfig.theme.colors.primary[500],
-        backgroundImage: `url(https://www.kolpaper.com/wp-content/uploads/2021/02/Manchester-United-Wallpaper-PC.jpg)`,
+        backgroundColor: appConfig.theme.colors.primary[300],
+        backgroundImage: `url(https://wallup.net/wp-content/uploads/2019/09/219176-hacker-computer-sadic-dark-anarchy-49.jpg)`,
         backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundBlendMode: 'multiply',
         color: appConfig.theme.colors.neutrals['000']
       }}
@@ -158,6 +158,7 @@ export default function ChatPage() {
               }}
             />
             {/* CallBack */}
+
             <ButtonSendSticker
               onStickerClick={(sticker) => {
                 // console.log('[USANDO O COMPONENTE] Salva esse sticker no banco', sticker);
@@ -250,7 +251,7 @@ function MessageList(props) {
             {/* Condicional: {mensagem.texto.startsWith(':sticker:').toString()} */}
             {mensagem.texto.startsWith(':sticker:')
               ? (
-                <Image src={mensagem.texto.replace(':sticker:', '')} />
+                <Image styleSheet={{width: '20%'}} src={mensagem.texto.replace(':sticker:', '')} />
               )
               : (
                 mensagem.texto

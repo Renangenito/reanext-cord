@@ -47,8 +47,8 @@ export default function PaginaInicial() {
         <Box
           styleSheet={{
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            backgroundColor: appConfig.theme.colors.primary[500],
-            backgroundImage: 'url(https://www.kolpaper.com/wp-content/uploads/2021/02/Manchester-United-Wallpaper-PC.jpg)',
+            backgroundColor: appConfig.theme.colors.primary[300],
+            backgroundImage: 'url(https://wallup.net/wp-content/uploads/2019/09/219176-hacker-computer-sadic-dark-anarchy-49.jpg)',
             backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundBlendMode: 'multiply',
           }}
         >
@@ -80,7 +80,7 @@ export default function PaginaInicial() {
                 width: { xs: '100%', sm: '50%' }, textAlign: 'center', marginBottom: '32px',
               }}
             >
-              <Titulo tag="h2">Boas vindas de volta!</Titulo>
+              <Titulo tag="h2">Bem vindo de volta!</Titulo>
               <Text variant="body3" styleSheet={{ marginBottom: '32px', color: appConfig.theme.colors.neutrals[300], fontSize:"17px",  }}>
                {appConfig.name}
               </Text>
