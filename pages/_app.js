@@ -18,6 +18,7 @@ function GlobalStyle() {
           display: flex;
           flex: 1;
         }
+      
         #__next {
           flex: 1;
         }

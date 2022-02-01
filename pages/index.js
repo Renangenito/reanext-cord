@@ -43,7 +43,9 @@ export default function PaginaInicial() {
 
   
     return (
-      <>
+      <> 
+      <title>Reanext-Cord</title>
+  
         <Box
           styleSheet={{
             display: 'flex', alignItems: 'center', justifyContent: 'center',

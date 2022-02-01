@@ -4,6 +4,7 @@ import appConfig from "../config.json";
 import { createClient } from "@supabase/supabase-js";
 import { useRouter } from "next/router";
 import ButtonSendSticker from '../components/ButtonSendSticker.js'
+import enviar from '../img/enviar.png'
 
 // Para usar o supa base tem que instalar via - npm install @supabase/supabase-js
 const SUPABASE_ANON_KEY =
@@ -132,6 +133,12 @@ export default function ChatPage() {
               alignItems: 'center',
             }}
           >
+            <Box 
+            styleSheet={{
+              width: "100%",
+              display: "flex"
+            }}
+            >
             <TextField
               value={mensagem}
               onChange={(event) => {
@@ -147,7 +154,8 @@ export default function ChatPage() {
               placeholder="Insira sua mensagem aqui..."
               type="textarea"
               styleSheet={{
-                width: '100%',
+                width: '94%',
+                
                 border: '0',
                 resize: 'none',
                 borderRadius: '5px',
@@ -157,6 +165,29 @@ export default function ChatPage() {
                 color: appConfig.theme.colors.neutrals[200],
               }}
             />
+            {mensagem &&(<Button
+           styleSheet={{
+            width: "45px",
+            height: "45px",
+            fontSize: "50px",
+            borderRadius: "50%",
+            paddingRight: "revert"
+          }}
+            onClick={(event) => {
+              
+                event.preventDefault();
+                handleNovaMensagem(mensagem);
+              
+            }}
+            
+          colorVariant='light'
+          label={<img src="https://img.icons8.com/android/24/000000/paper-plane.png"/>}
+          
+        />)}
+            </Box>
+            
+            
+            
             {/* CallBack */}
 
             <ButtonSendSticker
