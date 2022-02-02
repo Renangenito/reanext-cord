@@ -56,6 +56,7 @@ export default function PaginaInicial() {
         >
           <Box
             styleSheet={{
+              border: "1px solid #4e150a",
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
